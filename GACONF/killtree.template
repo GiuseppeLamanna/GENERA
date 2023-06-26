@@ -1,0 +1,1 @@
+kill -TERM `pstree PARENTPID -p -a -l | cut -d, -f2 | cut -d' ' -f1`

@@ -1,0 +1,12 @@
+if ($?VARNAME) then
+  if ((-e $VARNAME) && (-e $PWD/$VARNAME)) then
+    set VARNAME=$PWD/$VARNAME
+    set argv=($argv VARNAME=$VARNAME)
+    echo Location VARNAME has been reassigned to the absolute path $VARNAME
+    echo Current argument list is $argv
+  else if (!(-e $VARNAME) && !(-e $PWD/$VARNAME)) then
+    echo WARNING - location VARNAME=$VARNAME points to no file or directory.
+  endif
+else
+  echo Variable VARNAME is not defined
+endif

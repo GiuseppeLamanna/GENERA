@@ -1,0 +1,2 @@
+#!/bin/bash
+$DENOVO_ENV_FOLDER/bin/python3 $DENOVO_FOLDER/generate.py $1 $2 $3 $4
